@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   handlers.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yaretel- <yaretel-@student.s19.be>         +#+  +:+       +#+        */
+/*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 18:00:19 by yaretel-          #+#    #+#             */
-/*   Updated: 2025/11/01 05:36:38 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/02 07:18:26 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,8 @@ int	handle_input(int keysym, t_fractal *fractal)
 		fractal->offset_y += 20 / fractal->zoom;
 	if (keysym == XK_d)
 		fractal->offset_x += 20 / fractal->zoom;
+	if (keysym == XK_q)
+		fractal->color += 0x333333;
 	draw_fractal(fractal);
 	return (0);
 }
