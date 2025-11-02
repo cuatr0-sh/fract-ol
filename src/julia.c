@@ -6,7 +6,7 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 05:12:53 by asoria            #+#    #+#             */
-/*   Updated: 2025/11/02 07:17:16 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/02 07:35:02 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	calculate_julia(t_fractal *fractal)
 	double	zy;
 
 	i = 0;
-	zx = ((fractal->x - SIZE / 2) / fractal->zoom) + fractal->offset_x;
+	zx = ((fractal->x - SIZE / 2) / fractal->zoom) + fractal->offset_x + 0.7;
 	zy = ((fractal->y - SIZE / 2) / fractal->zoom) + fractal->offset_y;
 
 	while (++i < fractal->max_iterations)

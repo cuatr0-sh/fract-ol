@@ -6,11 +6,11 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 02:46:53 by asoria            #+#    #+#             */
-/*   Updated: 2025/11/02 04:49:55 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/02 07:34:26 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fract-ol.h"
+#include "../includes/fractol.h"
 
 void	calculate_mandelbrot(t_fractal *fractal)
 {

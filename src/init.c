@@ -6,11 +6,11 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 03:25:49 by asoria            #+#    #+#             */
-/*   Updated: 2025/11/02 04:46:42 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/02 07:34:24 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fract-ol.h"
+#include "../includes/fractol.h"
 
 void	init_fractal(t_fractal *fractal)
 {

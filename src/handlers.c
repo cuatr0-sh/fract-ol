@@ -6,11 +6,11 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 18:00:19 by yaretel-          #+#    #+#             */
-/*   Updated: 2025/11/02 07:18:26 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/02 07:34:23 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fract-ol.h"
+#include "../includes/fractol.h"
 
 static void	zoom(t_fractal *fractal, int x, int y, int zoom)
 {

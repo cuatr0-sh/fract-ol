@@ -6,11 +6,11 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 20:06:38 by asoria            #+#    #+#             */
-/*   Updated: 2025/10/30 02:40:05 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/02 07:34:28 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fract-ol.h"
+#include "../includes/fractol.h"
 
 static int	check_valid_args(int argc, char **argv, t_fractal *fractal)
 {

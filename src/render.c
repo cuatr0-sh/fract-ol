@@ -6,11 +6,11 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 02:52:27 by asoria            #+#    #+#             */
-/*   Updated: 2025/11/02 04:46:11 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/02 07:34:29 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fract-ol.h"
+#include "../includes/fractol.h"
 
 void	color_pixel(t_fractal *fractal, int x, int y, int color)
 {
@@ -29,9 +29,9 @@ void	draw_fractal(t_fractal *fractal)
 		while (fractal->y < SIZE)
 		{
 			if (fractal->type == 0)
-			{
 				calculate_mandelbrot(fractal);
-			}
+			else if (fractal->type == 1)
+				calculate_julia(fractal);
 			fractal->y++;
 		}
 		fractal->x++;
