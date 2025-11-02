@@ -6,7 +6,7 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 20:23:13 by asoria            #+#    #+#             */
-/*   Updated: 2025/10/30 06:25:55 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/02 03:06:54 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include "../libft/ft_printf/ft_printf.h"
 # include "../minilibx-linux/mlx.h"
 
-# define SIZE 500
+# define SIZE 400
 
 typedef struct s_fractal
 {

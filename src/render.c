@@ -6,7 +6,7 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 02:52:27 by asoria            #+#    #+#             */
-/*   Updated: 2025/10/30 06:56:15 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/02 04:46:11 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,18 @@ void	color_pixel(t_fractal *fractal, int x, int y, int color)
 void	draw_fractal(t_fractal *fractal)
 {
 	fractal->x = 0;
-	fractal->y = 0;
 	while (fractal->x < SIZE)
 	{
+	fractal->y = 0;
 		while (fractal->y < SIZE)
 		{
 			if (fractal->type == 0)
+			{
 				calculate_mandelbrot(fractal);
+			}
 			fractal->y++;
 		}
 		fractal->x++;
-		fractal->y = 0;
 	}
 		mlx_put_image_to_window(fractal->mlx, fractal->win, fractal->img_ptr, 0, 0);
 }

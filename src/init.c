@@ -6,7 +6,7 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 03:25:49 by asoria            #+#    #+#             */
-/*   Updated: 2025/10/30 06:50:17 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/02 04:46:42 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ void	init_fractal(t_fractal *fractal)
 	fractal->cy = 0;
 	fractal->zx = 0;
 	fractal->zy = 0;
-	fractal->offset_x = 0;
+	fractal->offset_x = -0.7;
 	fractal->offset_y = 0;
-	fractal->color = 0xFFFFFF;
-	fractal->zoom = 200.0;
-	fractal->max_iterations = 200;
+	fractal->color = 0x0044BB;
+	fractal->zoom = 150;
+	fractal->max_iterations = 250;
 }
 
 int	init_display(t_fractal *fractal)

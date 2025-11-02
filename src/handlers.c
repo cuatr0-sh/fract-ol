@@ -6,7 +6,7 @@
 /*   By: yaretel- <yaretel-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 18:00:19 by yaretel-          #+#    #+#             */
-/*   Updated: 2025/10/30 06:46:35 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/01 05:36:38 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	zoom(t_fractal *fractal, int x, int y, int zoom)
 	double	mouse_re;
 	double	mouse_im;
 
-	zoom_level = 1.42;
+	zoom_level = 1.2;
 	
 	// Convert mouse position to complex coordinates BEFORE zoom
 	mouse_re = (x - SIZE / 2.0) / fractal->zoom + fractal->offset_x;
@@ -44,7 +44,6 @@ static void	zoom(t_fractal *fractal, int x, int y, int zoom)
 
 int	handle_mouse(int mouse_code, int x, int y, t_fractal *fractal)
 {
-	printf("zoom: %f\n", fractal->zoom);
 	if (mouse_code == 4)
 		zoom(fractal, x, y, 1);
 	else if (mouse_code == 5)
@@ -62,5 +61,14 @@ int	handle_input(int keysym, t_fractal *fractal)
 		free(fractal->mlx);
 		exit(1);
 	}
+	if (keysym == XK_w)
+		fractal->offset_y += -20 / fractal->zoom;
+	if (keysym == XK_a)
+		fractal->offset_x += -20 / fractal->zoom;
+	if (keysym == XK_s)
+		fractal->offset_y += 20 / fractal->zoom;
+	if (keysym == XK_d)
+		fractal->offset_x += 20 / fractal->zoom;
+	draw_fractal(fractal);
 	return (0);
 }
