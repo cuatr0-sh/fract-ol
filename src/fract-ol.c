@@ -6,13 +6,13 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 19:09:19 by asoria            #+#    #+#             */
-/*   Updated: 2025/11/02 07:34:20 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/04 03:11:14 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-static void	print_usage()
+static void	print_usage(void)
 {
 	ft_printf("Usage: ./fract-ol [fractal] {parameters}\n");
 	ft_printf("Example:\n");
@@ -28,8 +28,8 @@ int	terminate_program(int exit_code)
 
 int	main(int argc, char **argv)
 {
-	t_fractal *fractal;
-	
+	t_fractal	*fractal;
+
 	fractal = malloc(sizeof(t_fractal));
 	init_fractal(fractal);
 	parse_args(argc, argv, fractal);

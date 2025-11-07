@@ -6,7 +6,7 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 02:52:27 by asoria            #+#    #+#             */
-/*   Updated: 2025/11/02 07:34:29 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/04 03:07:48 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	draw_fractal(t_fractal *fractal)
 	fractal->x = 0;
 	while (fractal->x < SIZE)
 	{
-	fractal->y = 0;
+		fractal->y = 0;
 		while (fractal->y < SIZE)
 		{
 			if (fractal->type == 0)
@@ -36,5 +36,5 @@ void	draw_fractal(t_fractal *fractal)
 		}
 		fractal->x++;
 	}
-		mlx_put_image_to_window(fractal->mlx, fractal->win, fractal->img_ptr, 0, 0);
+	mlx_put_image_to_window(fractal->mlx, fractal->win, fractal->img_ptr, 0, 0);
 }

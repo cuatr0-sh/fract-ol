@@ -6,7 +6,7 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 05:01:51 by asoria            #+#    #+#             */
-/*   Updated: 2025/11/02 05:15:00 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/04 03:02:52 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 # include <X11/keysym.h>
 # include <stdio.h>
 
-# include "../libft/libft.h"
-# include "../libft/ft_printf/ft_printf.h"
-# include "../minilibx-linux/mlx.h"
+# include "libft/libft.h"
+# include "libft/ft_printf/ft_printf.h"
+# include "minilibx-linux/mlx.h"
 
-# define SIZE 400
+# define SIZE 600
 
 typedef struct s_fractal
 {

@@ -6,7 +6,7 @@
 #    By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/24 18:34:14 by asoria            #+#    #+#              #
-#    Updated: 2025/11/02 07:19:45 by asoria           ###   ########.fr        #
+#    Updated: 2025/11/07 02:38:17 by asoria           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,12 +21,13 @@ OBJ_DIR		:= obj
 OBJ_FILES	:=$(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRC_FILES))
 
 # Libraries
-LIBFT_DIR	:= libft
+LIBFT_DIR	:= includes/libft
 LIBFT		:= $(LIBFT_DIR)/libft.a
 
-MINILIBX_DIR	:= minilibx-linux
+MINILIBX_DIR	:= includes/minilibx-linux
 MINILIBX	:= $(MINILIBX_DIR)/libmlx_Linux.a
 
+all: $(NAME)
 # Compiles source into obj
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -35,12 +36,9 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
 $(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)
 
-# Targets
-all: $(NAME)
-
 $(NAME): $(OBJ_FILES) $(LIBFT) $(MINILIBX)
 	$(CC) $(CFLAGS) $(OBJ_FILES) $(LIBFT) $(MINILIBX) -lX11 -lXext -o $(NAME)
-
+	@echo -e "\033[32m[✔] Built $(NAME)\033[0m"
 $(LIBFT):
 	$(MAKE) -C $(LIBFT_DIR)
 
@@ -57,3 +55,5 @@ fclean: clean
 	rm -f $(LIBFT)
 
 re: clean all
+
+.PHONY: all clean fclean re
