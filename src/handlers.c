@@ -6,7 +6,7 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 18:00:19 by yaretel-          #+#    #+#             */
-/*   Updated: 2025/11/02 07:34:23 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/07 19:25:35 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,25 +19,14 @@ static void	zoom(t_fractal *fractal, int x, int y, int zoom)
 	double	mouse_im;
 
 	zoom_level = 1.2;
-	
-	// Convert mouse position to complex coordinates BEFORE zoom
 	mouse_re = (x - SIZE / 2.0) / fractal->zoom + fractal->offset_x;
 	mouse_im = (y - SIZE / 2.0) / fractal->zoom + fractal->offset_y;
-	
 	if (zoom == 1)
-	{
-		// Zoom in
 		fractal->zoom *= zoom_level;
-	}
 	else if (zoom == -1)
-	{
-		// Zoom out
 		fractal->zoom /= zoom_level;
-	}
 	else
 		return ;
-	
-	// Adjust offset so the point under mouse stays in the same place
 	fractal->offset_x = mouse_re - (x - SIZE / 2.0) / fractal->zoom;
 	fractal->offset_y = mouse_im - (y - SIZE / 2.0) / fractal->zoom;
 }

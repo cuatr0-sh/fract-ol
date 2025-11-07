@@ -6,7 +6,7 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 20:06:38 by asoria            #+#    #+#             */
-/*   Updated: 2025/11/02 07:34:28 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/07 19:36:52 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,7 @@ static int	check_valid_args(int argc, char **argv, t_fractal *fractal)
 		if (argc != 4)
 			terminate_program(5);
 		fractal->cx = ft_atof(argv[2]);
-		printf("%f\n", fractal->cx);
 		fractal->cy = ft_atof(argv[3]);
-		printf("%f\n", fractal->cy);
 	}
 	return (0);
 }

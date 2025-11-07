@@ -6,7 +6,7 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 03:25:49 by asoria            #+#    #+#             */
-/*   Updated: 2025/11/07 02:41:06 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/07 19:36:07 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	init_fractal(t_fractal *fractal)
 
 int	init_display(t_fractal *fractal)
 {
-		fractal->mlx = mlx_init();
+	fractal->mlx = mlx_init();
 	if (NULL == fractal->mlx)
 		return (2);
 	fractal->win = mlx_new_window(fractal->mlx, SIZE, SIZE, "fract-ol");
