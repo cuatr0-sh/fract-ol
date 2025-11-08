@@ -6,13 +6,13 @@
 #    By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/24 18:34:14 by asoria            #+#    #+#              #
-#    Updated: 2025/11/07 02:38:17 by asoria           ###   ########.fr        #
+#    Updated: 2025/11/08 12:43:30 by asoria           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		:= fract-ol
 CC		:= cc
-CFLAGS		:= -Wall -Wextra -Werror -Iincludes -Ilibft -g3 -O3 -march=native -flto -pipe
+CFLAGS		:= -Wall -Wextra -Werror -Iincludes -Ilibft -g3 -O3 -march=native -flto -pipe -ffast-math -fomit-frame-pointer -funroll-loops -ftree-vectorize
 
 SRC_DIR		:= src
 SRC_FILES	:= $(wildcard $(SRC_DIR)/*.c)

@@ -6,7 +6,7 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 05:01:51 by asoria            #+#    #+#             */
-/*   Updated: 2025/11/08 12:39:12 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/08 14:23:36 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,13 @@
 # include <X11/X.h>
 # include <X11/keysym.h>
 # include <stdio.h>
+# include <math.h>
 
 # include "libft/libft.h"
 # include "libft/ft_printf/ft_printf.h"
 # include "minilibx-linux/mlx.h"
 
-# define SIZE 1440
+# define SIZE 600
 
 typedef struct s_fractal
 {
@@ -61,5 +62,6 @@ void	draw_fractal(t_fractal *fractal);
 
 void	calculate_mandelbrot(t_fractal *fractal);
 void	calculate_julia(t_fractal *fractal);
+void	calculate_burning_ship(t_fractal *fractal);
 
 #endif
