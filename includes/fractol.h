@@ -6,7 +6,7 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 05:01:51 by asoria            #+#    #+#             */
-/*   Updated: 2025/11/08 14:23:36 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/08 19:31:45 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,6 @@ void	draw_fractal(t_fractal *fractal);
 void	calculate_mandelbrot(t_fractal *fractal);
 void	calculate_julia(t_fractal *fractal);
 void	calculate_burning_ship(t_fractal *fractal);
+void	cleanup(t_fractal *fractal);
 
 #endif

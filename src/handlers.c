@@ -6,7 +6,7 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 18:00:19 by yaretel-          #+#    #+#             */
-/*   Updated: 2025/11/07 19:25:35 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/08 19:35:18 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,8 @@ int	handle_input(int keysym, t_fractal *fractal)
 {
 	if (keysym == XK_Escape)
 	{
-		mlx_destroy_window(fractal->mlx, fractal->win);
-		mlx_destroy_display(fractal->mlx);
-		free(fractal->mlx);
+		cleanup(fractal);
+		free(fractal);
 		exit(1);
 	}
 	if (keysym == XK_w)

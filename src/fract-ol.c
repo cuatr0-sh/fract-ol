@@ -6,7 +6,7 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 19:09:19 by asoria            #+#    #+#             */
-/*   Updated: 2025/11/08 13:56:39 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/08 19:33:52 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,15 @@ int	main(int argc, char **argv)
 	t_fractal	*fractal;
 
 	fractal = malloc(sizeof(t_fractal));
+	if (!fractal)
+		terminate_program(1);
 	init_fractal(fractal);
 	parse_args(argc, argv, fractal);
 	if (init_display(fractal) != 0)
-		terminate_program(init_display(fractal));
+	{
+		free(fractal);
+		terminate_program(7);
+	}
 	mlx_key_hook(fractal->win, handle_input, fractal);
 	mlx_mouse_hook(fractal->win, handle_mouse, fractal);
 	draw_fractal(fractal);
