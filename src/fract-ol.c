@@ -42,6 +42,7 @@ int	main(int argc, char **argv)
 	}
 	mlx_key_hook(fractal->win, handle_input, fractal);
 	mlx_mouse_hook(fractal->win, handle_mouse, fractal);
+mlx_hook(fractal->win, 17, 0, NULL);
 	draw_fractal(fractal);
 	mlx_loop(fractal->mlx);
 	free(fractal);
