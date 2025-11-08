@@ -6,7 +6,7 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 02:52:27 by asoria            #+#    #+#             */
-/*   Updated: 2025/11/07 19:10:26 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/08 14:22:10 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ void	draw_fractal(t_fractal *fractal)
 				calculate_mandelbrot(fractal);
 			else if (fractal->type == 1)
 				calculate_julia(fractal);
+			else if (fractal->type == 2)
+				calculate_burning_ship(fractal);
 			fractal->y++;
 		}
 		fractal->x++;

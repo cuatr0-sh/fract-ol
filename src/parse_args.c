@@ -6,7 +6,7 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 20:06:38 by asoria            #+#    #+#             */
-/*   Updated: 2025/11/07 19:36:52 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/08 14:21:04 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ int	parse_args(int argc, char **argv, t_fractal *fractal)
 		fractal->type = 0;
 	else if (!ft_strncmp(argv[1], "julia", 6))
 		fractal->type = 1;
+	else if (!ft_strncmp(argv[1], "burning_ship", 13))
+		fractal->type = 2;
 	else
 		terminate_program(6);
 	check_valid_args(argc, argv, fractal);

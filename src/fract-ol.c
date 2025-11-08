@@ -6,7 +6,7 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 19:09:19 by asoria            #+#    #+#             */
-/*   Updated: 2025/11/04 03:11:14 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/08 13:56:39 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,6 @@ int	main(int argc, char **argv)
 	mlx_mouse_hook(fractal->win, handle_mouse, fractal);
 	draw_fractal(fractal);
 	mlx_loop(fractal->mlx);
+	free(fractal);
 	return (0);
 }
