@@ -6,7 +6,7 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 18:00:19 by yaretel-          #+#    #+#             */
-/*   Updated: 2025/11/08 19:35:18 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/09 01:40:06 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,12 @@ static void	zoom(t_fractal *fractal, int x, int y, int zoom)
 		return ;
 	fractal->offset_x = mouse_re - (x - SIZE / 2.0) / fractal->zoom;
 	fractal->offset_y = mouse_im - (y - SIZE / 2.0) / fractal->zoom;
+}
+
+int	handle_x(void *param)
+{
+	(void)param;
+	exit(8);
 }
 
 int	handle_mouse(int mouse_code, int x, int y, t_fractal *fractal)

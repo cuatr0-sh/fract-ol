@@ -6,7 +6,7 @@
 /*   By: asoria <asoria@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 05:01:51 by asoria            #+#    #+#             */
-/*   Updated: 2025/11/08 19:31:45 by asoria           ###   ########.fr       */
+/*   Updated: 2025/11/09 01:38:51 by asoria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int		init_display(t_fractal *fractal);
 int		parse_args(int argc, char **argv, t_fractal *fractal);
 int		terminate_program(int exit_code);
 
+int		handle_x(void *param);
 int		handle_input(int keysym, t_fractal *fractal);
 int		handle_mouse(int mouse_code, int x, int y, t_fractal *fractal);
 
